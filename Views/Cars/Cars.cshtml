@@ -1,0 +1,20 @@
+﻿@model CarViewModel
+
+<h1>Лучшие автомобили</h1>
+<div class="row">
+    <section class="py-5 text-center container bg-dark cars-about">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto ">
+                <h1 class="fw-light text-light">Наш автопарк</h1>
+                <p class="lead text-light">За 10 лет существования нашей компании количество машин в автопарке Rent a Car составляет 420 машин!</p>
+                <p class="lead text-light">Ниже представлены все машины,которые вы можете взять в аренду</p>
+            </div>
+        </div>
+    </section>
+    @{
+        foreach (Car car in Model.favCars)
+        {
+            @Html.Partial("AllCars", car)
+        }
+    }
+</div>
